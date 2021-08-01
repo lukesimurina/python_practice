@@ -4,12 +4,12 @@
 #   "abcabcd" --> "d"
 #   "abcabcabc" --> "_"
 
-def firstNonRepeatingCharacter(text):
+def firstNotRepeatingCharacter(text):
     arr = list(text)
     arr1 = []
     for i in range(len(arr)):
         arr1.append(arr.count(arr[i]))
     try:
-        print(arr[arr1.index(1)])
+        return arr[arr1.index(1)]
     except ValueError:
-        print("_")
+        return "_"
